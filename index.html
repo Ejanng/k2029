@@ -4,38 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bakit Di Tayo Nagwork Noon?</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      font-family: 'Roboto', sans-serif;
+      background-image: url('https://source.unsplash.com/random');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
     .container {
       max-width: 600px;
-      margin: 50px auto;
       padding: 20px;
-      background-color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      color: #333;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
       text-align: center;
     }
-    .message {
+    h1 {
+      font-size: 2.5rem;
       margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .message {
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+    .message:hover {
+      background-color: rgba(255, 255, 255, 0.1);
     }
     .btn-submit {
-      display: block;
-      width: 100%;
-      padding: 10px;
+      padding: 10px 20px;
       background-color: #4CAF50;
       color: #fff;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
     .btn-submit:hover {
       background-color: #45a049;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -43,7 +77,7 @@
 
 <div class="container">
   <h1>Bakit Di Tayo Nagwork Noon?</h1>
-  <div class="message">
+  <div class="message" id="message">
     <p>"Bakit di tayo nagwork noon?<br>
     We had the greatest chemistry and I just realized it now that I wasn’t playing around when I said iloveyou then… I’m sorry, I want to reconnect and maybe give it another chance. Cuz until now you’ve always been on my mind, even when I say I have a crush on this person in front of me right now, you always pop up in my mind. You can’t say that it’s still infatuation bcuz, like rn? I can still say with confidence: I love you 💙<br>
     -FromDiary2019"</p>
@@ -53,6 +87,7 @@
 
 <script>
   function submitForm() {
+    // You can add more creative functionality here if needed
     alert("Form submitted!");
   }
 </script>
